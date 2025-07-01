@@ -69,7 +69,7 @@
       kab.innerHTML = `<option value="">-- Pilih Kabupaten/Kota --</option>`;
       document.getElementById("kecamatan").innerHTML = `<option value="">-- Pilih Kecamatan --</option>`;
       document.getElementById("kelurahan").innerHTML = `<option value="">-- Pilih Kelurahan --</option>`;
-      fetch(urlKabupaten)
+      fetch(urlkabupaten)
         .then(r => r.json())
         .then(data => {
           data.filter(x => x.provinsi_id === id).forEach(item => {
@@ -83,7 +83,7 @@
       const kec = document.getElementById("kecamatan");
       kec.innerHTML = `<option value="">-- Pilih Kecamatan --</option>`;
       document.getElementById("kelurahan").innerHTML = `<option value="">-- Pilih Kelurahan --</option>`;
-      fetch(urlKecamatan)
+      fetch(urlkecamatan)
         .then(r => r.json())
         .then(data => {
           data.filter(x => x.kabupaten_id === id).forEach(item => {
@@ -96,7 +96,7 @@
       const id = this.value;
       const kel = document.getElementById("kelurahan");
       kel.innerHTML = `<option value="">-- Pilih Kelurahan --</option>`;
-      fetch(urlKelurahan)
+      fetch(urlkelurahan)
         .then(r => r.json())
         .then(data => {
           data.filter(x => x.kecamatan_id === id).forEach(item => {
